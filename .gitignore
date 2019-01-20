@@ -1,7 +1,6 @@
 *.iml
 .gradle
 /local.properties
-.idea
 .DS_Store
 /build
 /captures
@@ -44,6 +43,7 @@ captures/
 
 # IntelliJ
 *.iml
+.idea
 
 # Keystore files
 # Uncomment the following lines if you do not want to check your keystore files in.
