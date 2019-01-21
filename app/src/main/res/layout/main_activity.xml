@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        tools:context=".ui.MainActivity">
 
     <fragment
             android:id="@+id/nav_host_fragment"
@@ -17,7 +17,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
             app:navGraph="@navigation/nav_graph"
-            tools:layout="@layout/user_fragment" />
+            tools:layout="@layout/user_fragment"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

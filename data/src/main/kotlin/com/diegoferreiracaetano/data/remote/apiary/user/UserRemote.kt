@@ -9,8 +9,9 @@ data class UserRemote(
     var password: String
 ) {
     fun map() = User(
-                    this.id,
-                    this.name,
-                    this.email,
-                    this.password)
+        this.id,
+        this.name,
+        this.email,
+        this.password
+    )
 }

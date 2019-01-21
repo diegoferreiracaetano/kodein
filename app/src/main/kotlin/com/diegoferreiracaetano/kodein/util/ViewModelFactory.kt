@@ -1,4 +1,4 @@
-package com.diegoferreiracaetano.kodeintest.util
+package com.diegoferreiracaetano.kodein.util
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

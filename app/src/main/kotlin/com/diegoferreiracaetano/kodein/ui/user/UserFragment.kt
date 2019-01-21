@@ -1,4 +1,4 @@
-package com.diegoferreiracaetano.kodeintest.ui.user
+package com.diegoferreiracaetano.kodein.ui.user
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.diegoferreiracaetano.domain.util.Response
-import com.diegoferreiracaetano.kodeintest.R
-import com.diegoferreiracaetano.kodeintest.util.viewModel
+import com.diegoferreiracaetano.kodein.R
+import com.diegoferreiracaetano.kodein.util.viewModel
 import kotlinx.android.synthetic.main.user_fragment.*
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -34,7 +34,7 @@ class UserFragment : Fragment(), KodeinAware {
             if (it is Response.Success) {
                 var name = ""
                 it.data.forEach {
-                    name += it.name+"\n"
+                    name += it.name + "\n"
                 }
                 message.text = name
             }

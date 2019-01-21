@@ -1,4 +1,4 @@
-package com.diegoferreiracaetano.kodeintest.ui.user
+package com.diegoferreiracaetano.kodein.ui.user
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,7 +11,7 @@ class UserViewModel(getUsersInteractor: GetUsersInteractor) : ViewModel() {
 
     private val _users = MutableLiveData<Response<List<User>>>()
     val users: LiveData<Response<List<User>>>
-            get() = _users
+        get() = _users
 
     init {
         getUsersInteractor(Unit, _users)

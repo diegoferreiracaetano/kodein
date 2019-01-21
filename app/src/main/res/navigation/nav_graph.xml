@@ -4,6 +4,6 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
             app:startDestination="@id/userFragment">
 
-    <fragment android:id="@+id/userFragment" android:name="com.diegoferreiracaetano.kodeintest.ui.user.UserFragment"
+    <fragment android:id="@+id/userFragment" android:name="com.diegoferreiracaetano.kodein.ui.user.UserFragment"
               android:label="user_fragment" tools:layout="@layout/user_fragment"/>
 </navigation>

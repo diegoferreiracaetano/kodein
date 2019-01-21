@@ -1,4 +1,4 @@
-package com.diegoferreiracaetano.kodeintest.di
+package com.diegoferreiracaetano.kodein.di
 
 import com.diegoferreiracaetano.data.di.apiModule
 import com.diegoferreiracaetano.data.di.httpCLientModule

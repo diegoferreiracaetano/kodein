@@ -23,6 +23,7 @@ abstract class Interactor<in P, R> : LiveData<R>() {
             }
         }
     }
+
     override fun onInactive() {
         super.onInactive()
         job.cancel()

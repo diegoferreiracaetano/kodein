@@ -1,9 +1,9 @@
-package com.diegoferreiracaetano.kodeintest.di
+package com.diegoferreiracaetano.kodein.di
 
 import androidx.lifecycle.ViewModelProvider
-import com.diegoferreiracaetano.kodeintest.ui.user.UserViewModel
-import com.diegoferreiracaetano.kodeintest.util.ViewModelFactory
-import com.diegoferreiracaetano.kodeintest.util.bindViewModel
+import com.diegoferreiracaetano.kodein.ui.user.UserViewModel
+import com.diegoferreiracaetano.kodein.util.ViewModelFactory
+import com.diegoferreiracaetano.kodein.util.bindViewModel
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance

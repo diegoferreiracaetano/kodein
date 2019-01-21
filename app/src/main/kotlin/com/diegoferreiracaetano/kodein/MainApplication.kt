@@ -1,7 +1,7 @@
-package com.diegoferreiracaetano.kodeintest
+package com.diegoferreiracaetano.kodein
 
 import android.app.Application
-import com.diegoferreiracaetano.kodeintest.di.appModule
+import com.diegoferreiracaetano.kodein.di.appModule
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 

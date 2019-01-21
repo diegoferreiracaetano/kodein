@@ -1,4 +1,4 @@
-package com.diegoferreiracaetano.kodeintest.util
+package com.diegoferreiracaetano.kodein.util
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
