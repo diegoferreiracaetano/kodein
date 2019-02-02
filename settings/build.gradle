@@ -11,8 +11,7 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
 
@@ -26,22 +25,29 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
     implementation 'org.kodein.di:kodein-di-generic-jvm:6.0.1'
+    implementation 'org.kodein.di:kodein-di-framework-android-x:6.0.1'
+
+    implementation project(path: ':data')
+    implementation project(path: ':util')
+    implementation project(path: ':model')
+    implementation project(path: ':domain')
 
     testImplementation 'junit:junit:4.13-beta-1'
+    androidTestImplementation 'androidx.test:core:1.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.2-alpha01'
-    api project(path: ':model')
 }
 repositories {
     mavenCentral()

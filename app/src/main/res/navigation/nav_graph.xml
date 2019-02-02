@@ -5,5 +5,9 @@
             app:startDestination="@id/userFragment">
 
     <fragment android:id="@+id/userFragment" android:name="com.diegoferreiracaetano.kodein.ui.user.UserFragment"
-              android:label="user_fragment" tools:layout="@layout/user_fragment"/>
+              android:label="user_fragment" tools:layout="@layout/user_fragment">
+        <action android:id="@+id/action_next" app:destination="@id/settingsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/settingsFragment" android:name="com.diegoferreiracaetano.settings.ui.SettingsFragment"
+              android:label="fragment_settings" tools:layout="@layout/fragment_settings"/>
 </navigation>

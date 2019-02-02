@@ -8,6 +8,6 @@ import org.kodein.di.KodeinAware
 class MainApplication : Application(), KodeinAware {
 
     override val kodein = Kodein.lazy {
-        import(appModule)
+        import(appModule(this@MainApplication))
     }
 }

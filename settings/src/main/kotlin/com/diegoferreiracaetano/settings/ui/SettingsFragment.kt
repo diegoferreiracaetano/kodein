@@ -1,49 +1,41 @@
-package com.diegoferreiracaetano.kodein.ui.user
-
+package com.diegoferreiracaetano.settings.ui
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.Navigation
 import com.diegoferreiracaetano.domain.util.Response
-import com.diegoferreiracaetano.kodein.R
+import com.diegoferreiracaetano.settings.R
 import com.diegoferreiracaetano.util.ui.viewModel
-import kotlinx.android.synthetic.main.user_fragment.btn_settings
-import kotlinx.android.synthetic.main.user_fragment.message
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.closestKodein
+import kotlinx.android.synthetic.main.fragment_settings.text
 
-class UserFragment : Fragment(), KodeinAware {
+class SettingsFragment : Fragment() , KodeinAware {
 
     override val kodein: Kodein by closestKodein()
 
-    private val viewModel: UserViewModel by viewModel()
+    private val viewModel: SettingsViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.user_fragment, container, false)
+    ): View? {
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.users.observe(this, Observer {
-            if (it is Response.Success) {
-                var name = ""
+        viewModel.getSettings().observe(this, Observer {
+            if(it is Response.Success && it.data.isNotEmpty()){
                 it.data.forEach {
-                    name += it.name + "\n"
+                    text.text = it
                 }
-                message.text = name
             }
         })
-
-        btn_settings.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_next)
-        }
     }
+
 }
